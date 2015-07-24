@@ -12,7 +12,7 @@ The example Framework is configured like this:
 - Zoo module contains Animal class with eat() function.
 - AlienZoo module is designed to rely on Zoo module. It inherits the Animal class to its Coeurl class.
 - "Zoo_beta" folder contains a "later version" (not a new release!) of the Zoo module. The Animal class has a slightly different implementation.
-- "AlienZoo_beta" folder also contains a "later version" of AlienZoo module. configured to work with "Zoo_beta" In this example, it's incompatible to the obsolete Zoo version, but it doesn't have to be the case. I just don't want to involve Interfaces in this example (and it would preferably require anonymous traits and interfaces, outside of current technical capacity).
+- "AlienZoo_beta" folder also contains a "later version" of AlienZoo module, configured to work with "Zoo_beta". In this example, it's incompatible to the obsolete Zoo version, but it doesn't have to be the case. I just don't want to involve Interfaces in this example (and it would preferably require anonymous traits and interfaces, outside of current technical capacity).
 - ZooKeeper is a module that uses both Zoo and "Zoo_beta" by instantiating objects of Animal class and executing "eat" function. It can also test AlienZoo and Coeurl species, but currently it's unavailable due to a bug.
 
 In frameworks's files there are comments containing the preferred syntax, such as being able to work with anonymous class directly - class() { } - and not by instantiating it - new ReflectionClass(new class() {...}) . The temporary object is created just to to gain access to the new class! It's unnecessary.
